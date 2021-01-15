@@ -111,11 +111,232 @@
 
     </p>
 
-    </section>  
+     
+
+    <h3><span class ="b_line">El motor de JavaScript</span></h3>
+    <div class="one_image span-25"></div>
+
+        <p> Para interpretar el lenguaje los navegadores incluyen un motor de JavaScript, siendo algunos 
+            de los más conocidos los siguientes:
+          
+        </p>
+
+            <li><strong> Spider Monkey (FireFox) </strong></li>
+            <li><strong> V8 usado en navegadores basados en chromium (chrome,Microsoft Edge, Opera) y en Node.jS y Deno. </strong></li>
+            <li><strong> JavaScriptCore usado en navegadores basados en Webkit(Safari) </strong></li>
+            <li><strong> Carakan(Version antiguas de opera) </strong></li>
+            <li><strong> Charka interprete de JavaScript(Internet Explorer)  </strong></li>
+
+         <p>JavaScript es un lenguaje single-thread, es decir, tiene solo un hilo de ejecución, por lo que
+              las tareas se van ejecutando secuencialmente. vEl lanzamiento en 2008 del motor V8 como proyecto 
+              open source, desarrollado por Google, supuso una gran mejora en los motores de JS al crear una 
+              combinación de intérprete y compilador. Actualmente el resto de motores modernos utilizan esta 
+              técnica, JIT (Just In Time compiler).</p> 
+
+              <div id= "image_rotor"><img src="images/motorJS.png" width="900"
+                height="300" alt="image" /></div> 
+                <h3><span class ="b_line">Como funciona?</span></h3>
+                <div class="one_image span-25"></div>
+
+                <p>El compilador traduce el código fuente a bytecode de la manera más rápida posible y, 
+                este bytecode es ejecutado por el intérprete. El sistema también cuenta con un «Profiler» 
+                que analiza las operaciones e identifica el código que se puede optimizar para mejorar el 
+                rendimiento. Luego se reemplazan las secciones de bytecode por el código optimizado. Esto 
+                implica que la velocidad de ejecución del código JavaScript mejora gradualmente mientras se ejecuta.</p>
+
+                <h3><span class ="b_line">CONDICIONALES</span></h3>
+                <div class="one_image span-25"></div>
+                    <br>
+                    <h2> Introduccion
+                    </h2>       
+                    <p>
+                        Un script consiste en una lista de enunciados que se van ejecutando a medida que se cargan.
+                         Sin embargo, en ocasiones nos interesa controlar el flujo de la ejecución estableciendo 
+                         alternativas, es decir, que una serie de enunciados se ejecuten en algunas ocasiones y en otras no.
+                          Para permitir esto existen las estructuras condicionales.
+                    </p>
+                    <h3>IF - ELSE</h3>
+
+                    <P>
+                        Por medio de if se puede indicar una condición que, de cumplirse, permite la ejecución de 
+                        uno o más enunciados. Por medio de else se puede establecer una alternativa, aunque su uso es opcional.
+
+                        La sintaxis de esta estructura es la siguiente:
+                    </P>
+
+                    <div id= "image_rotor"><img src="images/ejemplo1.jpg" width="900"
+                        height="150" alt="image" /></div> 
+                    <p>
+                        Por ejemplo, supongamos que queremos lanzar una advertencia si el valor de una variable es mayor que 100,
+                         y otra si es mayor:
+                    </p>    
+                    <div id= "image_rotor"><img src="images/ejemplo2.jpg" width="900"
+                        height="150" alt="image" /></div> 
+                    <p>
+                        Además, las instrucciones se pueden concatenar:
+                    </p>  
+                    <div id= "image_rotor"><img src="images/ejemplo3.jpg" width="900"
+                        height="200" alt="image" /></div>
+                    <p>
+                        Se pueden concatenar tantos else if como se quiera, pero cuando se trata de analizar el valor de una 
+                        variable suele ser más efectivo emplear la estructura condicional que veremos a continuación.
+                    </p>   
+                    <h3>SWITCH</h3>
+                    <P>
+                        Por medio de switch se puede listar una serie de bloques de enunciados que se ejecuten dependiendo del valor de una variable.
+
+                        La sintaxis sería:
+                    </P>
+                    <div id= "image_rotor"><img src="images/switch1.jpg" width="800"
+                        height="300" alt="image" /></div>
+                    <p>
+                        Por ejemplo, supongamos que analizamos el valor de una variable y que dependiendo de éste lanzamos un mensaje de alerta:
+
+                    </p>
+                    <div id= "image_rotor"><img src="images/switch2.jpg" width="900"
+                        height="400" alt="image" /></div>
+                    <p>
+                        <strong> break </strong>indica que el bloque de código puede dejar de interpretarse cuando se haya dado una coincidencia.
+
+                        La especificación de <strong>default</strong> es opcional. En este caso, si no se emplease simplemente no se lanzaría ninguna alerta en caso de 
+                        que el valor de nombrePersonaje no coincidiese con ninguno de los nombres recogidos en switch.
+                    </p> 
+                    
+                    <h3>Operadores Logicos</h3>
+                    <p>
+                        Los operadores lógicos amplian las posibilidades de establecer condiciones. Son:
+                    </p>
+                    <div id= "image_rotor"><img src="images/operadores_sintax.jpg" width="900"
+                        height="400" alt="image" /></div>
+                    
+                    <p>
+                        En el caso de <strong>!</strong>, se emplea cuando lo que se quiere comprobar no es la existencia de un objeto o variable, sino su no existencia.
+                         Por ejemplo, si queremos comprobar que no existe la variable a porque no ha sido declarada, el código sería:
+                    </p>
+                    <div id= "image_rotor"><img src="images/operadores2.jpg" width="700"
+                        height="50" alt="image" /></div>
+
+                    <p>
+                        Para los otros dos operadores <strong>—&& </strong> y <strong>||— </strong>, cada condición que se quiera establecer debe ir entre paréntesis. Por ejemplo, la siguiente condición:
+                    </p>   
+                    
+                    <div id= "image_rotor"><img src="images/operadores3.jpg" width="900"
+                        height="50" alt="image" /></div>
+
+                    <p>
+                        haría que sólo se mostrase la alerta en caso de que a sea eso, un número par positivo.
+                    </p>  
+                    <h3>ARRAY</h3>
+
+                    <p>
+                        En la sección dedicada a las variables ya vimos lo que era una matriz, pero como también
+                        indiqué allí, verla como un tipo de variable no es más que una forma intuitiva de comprenderla. 
+                        En realidad una matriz es una instancia del objeto Array, y por ello en los ejemplos de las 
+                        secciones anteriores la declarábamos por medio de la palabra clave new.
+
+                        Como todos los objetos, Array tiene una serie de propiedades y de métodos. Voy a recoger
+                         aquí los más importantes.
+                        
+                        De las propiedades, el que casi en un 90% de las ocasiones se va a emplear en exclusiva es 
+                        length. Esta propiedad contiene el número de valores almacenados en la matriz:
+
+                    </p>
+
+                    <div id= "image_rotor"><img src="images/array1.jpg" width="600"
+                        height="250" alt="image" /></div>
+                    <p>
+                        La alerta de este ejemplo nos mostraría el valor 3.
+
+                        Hay que tener en cuenta que la longitud de una matriz es independiente de la cantidad de 
+                        valores almacenados, sino que depende de aquel que tenga un índice mayor. Por ejemplo, 
+                        si declaramos una matriz especificando inicialmente el número de ítems:
+
+                    </p> 
+                    
+                    <div id= "image_rotor"><img src="images/array2.jpg" width="500"
+                        height="50" alt="image" /></div>
+                    <p>
+                        o asignamos un valor de esta manera:    
+                    </p>
+
+                    <div id= "image_rotor"><img src="images/array3.jpg" width="700"
+                        height="70" alt="image" /></div>
+                    
+                    <p>
+                        La misma alerta de antes nos diría que la longitud de la matriz es 100 en ambos casos.
+                    </p>
+                    <h3>BUCLE / LOOP</h3>
+                    <P>
+                        Un bucle es la repetición de uno o varios enunciados un número determinado de veces.
+
+                        Hay dos estructuras básicas para crear bucles: for y do … while.
+                    </P>   
+                    <H3>FOR</H3>
+                    
+                    <P>
+                        La sintaxis de <strong> for</strong> es la siguiente:
+                    </P>
+
+                    <div id= "image_rotor"><img src="images/loop1.jpg" width="700"
+                        height="70" alt="image" /></div>
+
+                    <p>
+                        Por partes: 
+                        <br>
+                        
+                            <li><dfn>contador</dfn> no es más que una variable que indica la cantidad de veces que se ha ejecutado el bucle.</li>
+                            <li><dfn>condición</dfn> establece un límite para las repeticiones; el bucle se repite <strong>mientras que la condición sea verdadera</strong>.</li>
+                            <li><dfn>variación_del_contador</dfn> indica un incremento o un decremento para el contador.</li>
+                        
+                    </p>    
+                    <p>
+                        Por ejemplo, supongamos que quiero lanzar una alerta por cada uno de los 
+                        valores de una matriz que contiene los libros de James Ballard que tengo en mi estantería:
+                    </p>
+
+                    <div id= "image_rotor"><img src="images/loop2.jpg" width="700"
+                        height="400" alt="image" /></div>
+                    
+                    <p>
+                        El bucle comienza con i igual a 0, por lo que la alerta muestra <strong> Aparato de vuelo rasante</strong>.
+                         Como no hay más enunciados, tras ello i se incrementa <strong> —i++ </strong> es la sintaxis abreviada de <strong> i=i+1— </strong>,
+                          y repite la operación. Continúa haciendo lo mismo hasta que i es igual a 15, momento en 
+                          que <strong> i<=14 </strong> se vuelve falsa, y el bucle deja de ejecutarse.
+
+                    </p>
+
+                    <h3>do - while</h3>
+
+                    <p>
+                        El comportamiento de <strong> do … while </strong>es similar al de <strong> for </strong>, con la diferencia de que primero se 
+                        ejecutan los enunciados y luego se comprueba la codición. Su sintaxis es:
+                    </p>
+
+                    <div id= "image_rotor"><img src="images/loop3.jpg" width="800"
+                        height="130" alt="image" /></div>
+                    <p>
+                        Si rehacemos el ejemplo anterior por medio de esta instrucción, tenemos el siguiente código:
+                    </p>
+
+                    <div id= "image_rotor"><img src="images/loop4.jpg" width="700"
+                        height="400" alt="image" /></div>
+                    <p>
+                        En este caso tenemos que declarar el contador <strong> i </strong> fuera de la estructura del bucle para poder emplearlo, 
+                        y su valor se debe actualizar en un enunciado que forma parte del bloque a ejecutar. El resultado de 
+                        ejecutarlo sería el mismo.
+
+                        Ventajas o desventajas del uso de <strong> for </strong> en lugar de <strong> do … while </strong> no se me ocurren, aunque personalmente 
+                        prefiero emplear el primero. Sólo hay que tener en cuenta un detalle que sí que los diferencia: en el 
+                        de rehacer el bucle anterior que no se ejecutaba nunca <strong> for(var i=0;i>=100;i++)</strong>, si se programase por 
+                        medio de do … while se ejecutaría una vez, puesto que la comprobación de la condición es posterior.
+                    </p>    
+
     
-    <section>
-             <p>Espacio para realizar ejercicios.</p>
-    </section>
+        </section> 
+        
+       
+
+        
 
     <!--################################################-->
     <div id="icons_wrapper">
